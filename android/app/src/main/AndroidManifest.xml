@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cuneiform">
+    package="com.chatram.cuneiform">
    <application
-        android:label="cuneiform"
+        android:label="kusabi"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
