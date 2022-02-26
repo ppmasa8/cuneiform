@@ -8,30 +8,33 @@ class TextForm extends StatefulWidget {
 }
 
 class _TextFormState extends State<TextForm> {
+  final myFocusNode = FocusNode();
+  final textController = TextEditingController();
+  String text = "";
+
   @override
   Widget build(BuildContext context) {
-    final formState = GlobalKey<FormState>();
-
     return SingleChildScrollView(
       padding: const EdgeInsets.all(60.0),
-      key: formState,
       child: Column(
         children: [
-          TextFormField(
-            autofocus: true,
+          TextField(
+            focusNode: myFocusNode,
+            controller: textController,
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Please input this form',
             ),
-            onFieldSubmitted: (value) {
-              print(value);
+            onChanged: (value) {
+              text = value;
             },
-            onSaved: (value) {},
           ),
           TextButton(
             child: const Text('Submit'),
-            // submitした時の処理
-            onPressed: () {},
+            onPressed: () {
+              final plainText = textController.text;
+              print(plainText);
+            },
           ),
         ],
       ),
