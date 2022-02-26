@@ -8,21 +8,30 @@ class TextForm extends StatefulWidget {
 }
 
 class _TextFormState extends State<TextForm> {
-  String text = '';
   @override
   Widget build(BuildContext context) {
+    final formState = GlobalKey<FormState>();
+
     return SingleChildScrollView(
       padding: const EdgeInsets.all(60.0),
+      key: formState,
       child: Column(
         children: [
-          TextField(
+          TextFormField(
+            autofocus: true,
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Please input this form',
             ),
-            onChanged: (letter) {
-              text = letter;
+            onFieldSubmitted: (value) {
+              print(value);
             },
+            onSaved: (value) {},
+          ),
+          TextButton(
+            child: const Text('Submit'),
+            // submitした時の処理
+            onPressed: () {},
           ),
         ],
       ),
