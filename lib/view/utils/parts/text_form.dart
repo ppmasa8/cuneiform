@@ -10,7 +10,15 @@ class TextForm extends StatefulWidget {
 class _TextFormState extends State<TextForm> {
   final myFocusNode = FocusNode();
   final textController = TextEditingController();
+  String plainText = "";
   String text = "";
+
+  void _updatePlainText() {
+    setState(() {
+      plainText = textController.text;
+      print(plainText);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +39,9 @@ class _TextFormState extends State<TextForm> {
           ),
           TextButton(
             child: const Text('Submit'),
-            onPressed: () {
-              final plainText = textController.text;
-              print(plainText);
-            },
+            onPressed: _updatePlainText,
           ),
+          Text(plainText),
         ],
       ),
     );
