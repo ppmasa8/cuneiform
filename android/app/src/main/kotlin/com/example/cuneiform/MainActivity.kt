@@ -1,4 +1,4 @@
-package com.example.cuneiform
+package com.chatram.cuneiform
 
 import io.flutter.embedding.android.FlutterActivity
 
