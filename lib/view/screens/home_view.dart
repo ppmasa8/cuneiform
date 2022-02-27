@@ -1,3 +1,4 @@
+import 'package:cuneiform/const.dart';
 import 'package:cuneiform/view/utils/parts/text_form.dart';
 import 'package:flutter/material.dart';
 
@@ -12,11 +13,7 @@ class HomeView extends StatelessWidget {
         child: Column(
           children: [
             const TextForm(),
-            SizedBox(
-                width: 300,
-                height: 350,
-                child: Image.network(
-                    'https://www.researchgate.net/profile/Wim-Peters/publication/251774462/figure/fig1/AS:298093233885205@1448082373839/Example-of-Sumerian-cuneiform.png')),
+            SizedBox(width: 300, height: 350, child: Image.network(imgUrl)),
           ],
         ),
       ),

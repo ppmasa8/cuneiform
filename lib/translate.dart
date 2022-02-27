@@ -43,7 +43,7 @@ class Translate {
       // print(temp);
       // print(temp.isNotEmpty);
       temp.isNotEmpty ? result.add(temp) : result.add(str);
-      // print(result);
+      print(result);
     }
     return result.join('');
   }
