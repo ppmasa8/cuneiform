@@ -45,7 +45,8 @@ class _TextFormState extends State<TextForm> {
           Text(
             Translate.Execute(plainText),
             style: const TextStyle(
-              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
             ),
           ),
         ],
