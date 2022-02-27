@@ -1,3 +1,4 @@
+import 'package:cuneiform/translate.dart';
 import 'package:flutter/material.dart';
 
 class TextForm extends StatefulWidget {
@@ -42,7 +43,7 @@ class _TextFormState extends State<TextForm> {
             onPressed: _updatePlainText,
           ),
           Text(
-            plainText,
+            Translate.Execute(plainText),
             style: const TextStyle(
               fontStyle: FontStyle.italic,
             ),
