@@ -34,7 +34,7 @@ class Translate {
     List<String> strings = text.toLowerCase().split('');
     for (var str in strings) {
       String temp;
-      if (hash[str] != '') {
+      if (hash[str] != null) {
         Runes input = Runes(hash[str]);
         temp = String.fromCharCodes(input);
       } else {
