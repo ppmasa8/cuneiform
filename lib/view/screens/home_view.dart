@@ -2,6 +2,7 @@ import 'package:cuneiform/const.dart';
 import 'package:cuneiform/view/utils/parts/ad_manager.dart';
 import 'package:cuneiform/view/utils/parts/text_form.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -17,7 +18,10 @@ class HomeView extends StatelessWidget {
         child: Center(child: AdManager().getBannerAdWidget(width, height)));
 
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: const Text('Cuneiform')),
+      appBar: AppBar(centerTitle: true, title: Text('Cuneiform',
+      style: GoogleFonts.dancingScript(
+        fontWeight: FontWeight.w700
+      )),),
       body: SingleChildScrollView(
         child: Column(
           children: [
