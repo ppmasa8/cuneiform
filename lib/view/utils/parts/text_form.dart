@@ -1,5 +1,6 @@
 import 'package:cuneiform/translate.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextForm extends StatefulWidget {
   const TextForm({Key? key}) : super(key: key);
@@ -39,7 +40,11 @@ class _TextFormState extends State<TextForm> {
             },
           ),
           TextButton(
-            child: const Text('Submit'),
+            child: Text('Submit',
+                style: GoogleFonts.montserrat(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400,
+                )),
             onPressed: _updatePlainText,
           ),
           Text(
