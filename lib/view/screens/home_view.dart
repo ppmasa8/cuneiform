@@ -18,10 +18,15 @@ class HomeView extends StatelessWidget {
         child: Center(child: AdManager().getBannerAdWidget(width, height)));
 
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: Text('Cuneiform',
-      style: GoogleFonts.dancingScript(
-        fontWeight: FontWeight.w700
-      )),),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text('Cuneiform',
+              style: GoogleFonts.dancingScript(
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+                fontSize: 30,
+              )),
+          backgroundColor: Colors.white),
       body: SingleChildScrollView(
         child: Column(
           children: [
