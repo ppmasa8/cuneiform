@@ -32,8 +32,11 @@ class _TextFormState extends State<TextForm> {
             focusNode: myFocusNode,
             controller: textController,
             decoration: const InputDecoration(
-              border: OutlineInputBorder(),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.black26)),
               labelText: 'Please input this form',
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.black26)),
             ),
             onChanged: (value) {
               text = value;
